@@ -1,7 +1,5 @@
 const seccion = document.getElementsByClassName("section");
-//const newSection = document.createElement("section");
-//newSection.id = "nuevaSeccion";
-//body[0].appendChild(newSection);
+
 const divContenedor = document.createElement("div");
 divContenedor.id = "productosIndex";
 seccion[0].appendChild(divContenedor);
@@ -65,20 +63,27 @@ boton3.innerHTML = "Comprar";
 boton4.innerHTML = "Comprar";
 boton5.innerHTML = "Comprar";
 
-const carrito = [];
+function avisoCompra() {
+  console.log("Enviado al carrito!");
+}
 
-function agregarProducto(producto) {
+boton1.addEventListener("click", avisoCompra);
+
+/* function agregarProducto(producto) {
   carrito.push(producto);
   console.log(carrito);
-}
+} */
 //fx buscar elemento por el id
-function buscarProducto(id) {
+/* function buscarProducto(id) {
   return productos.find((elemento) => elemento.id == id);
-}
+} */
 /* <button class ="card__btn">Comprar</button> */
-boton1.addEventListener("click", buscarProducto(boton1.className));
+//let productoElegido = buscarProducto();
+/* boton1.addEventListener("click", buscarProducto(parseInt(boton1.className)));
+let productoElegido = buscarProducto(); */
+//fx busca el producto en el array(objeto) por el id y lo guarda en producatoElegido
+//console.log(productoElegido); //muestro el objeto que encontró la fx por el id
 
-let productoElegido = buscarProducto(opcionElegida); //fx busca el producto en el array(objeto) por el id y lo guarda en producatoElegido
-console.log(productoElegido); //muestro el objeto que encontró la fx por el id
-
-agregarProducto(productoElegido); //AGREGO EL OBJETO (Producto) al array CARRITO
+/* agregarProducto(productoElegido); //AGREGO EL OBJETO (Producto) al array CARRITO
+console.log(carrito);
+ */
